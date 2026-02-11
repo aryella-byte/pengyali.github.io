@@ -1,51 +1,40 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Yali Peng | 彭雅丽 - Associate Professor at Renmin University of China</title>
+    <title>Yali Peng | 彭雅丽 - Associate Professor</title>
     <meta name="title" content="Yali Peng | Associate Professor of Law">
     <meta name="description" content="Yali Peng (彭雅丽), Associate Professor at Renmin University of China School of Law. Research: Criminal Law, Empirical Legal Studies, Sentencing & Judicial Behavior.">
-    <meta name="keywords" content="Yali Peng, 彭雅丽, Criminal Law, 刑法学, Empirical Legal Studies, 实证法学, Renmin University, 中国人民大学, Chicago Law, Sentencing, Judicial Behavior">
+    <meta name="keywords" content="Yali Peng, 彭雅丽, Criminal Law, Empirical Legal Studies, Renmin University, Oxford, Chicago">
     <meta name="author" content="Yali Peng">
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English, Chinese">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://aryella-byte.github.io/pengyali.github.io/">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aryella-byte.github.io/pengyali.github.io/">
     <meta property="og:title" content="Yali Peng | Associate Professor of Law at Renmin University">
     <meta property="og:description" content="Criminal Law, Empirical Legal Studies, Sentencing and Judicial Behavior.">
     <meta property="og:image" content="https://aryella-byte.github.io/pengyali.github.io/photo.png">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://aryella-byte.github.io/pengyali.github.io/">
     <meta property="twitter:title" content="Yali Peng | Associate Professor of Law">
-    <meta property="twitter:description" content="Criminal Law, Empirical Legal Studies, Sentencing and Judicial Behavior.">
-    <meta property="twitter:image" content="https://aryella-byte.github.io/pengyali.github.io/photo.png">
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    <!-- Academic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@400;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- MathJax for equations -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <style>
         :root {
-            --bg: #0d1117;
-            --bg-secondary: #161b22;
-            --border: #30363d;
-            --text: #c9d1d9;
-            --text-muted: #8b949e;
-            --accent: #58a6ff;
-            --accent-green: #3fb950;
-            --accent-purple: #a371f7;
+            --text: #1a1a1a;
+            --text-muted: #666;
+            --link: #1a5f9e;
+            --link-hover: #0d3d66;
+            --border: #ccc;
+            --bg: #fafafa;
+            --bg-paper: #fff;
+            --accent: #8b0000;
         }
         
         * {
@@ -55,679 +44,523 @@
         }
         
         body {
-            font-family: 'JetBrains Mono', 'Inter', -apple-system, monospace;
-            background: var(--bg);
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 16px;
+            line-height: 1.8;
             color: var(--text);
-            line-height: 1.6;
-            min-height: 100vh;
+            background: var(--bg);
+            text-align: justify;
+            hyphens: auto;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        /* Language Switcher */
-        .lang-switch {
-            position: absolute;
-            top: 1rem;
-            right: 2rem;
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .lang-btn {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 0.3rem 0.8rem;
-            border-radius: 4px;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        
-        .lang-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        
-        .lang-btn.active {
-            background: var(--accent);
-            color: var(--bg);
-            border-color: var(--accent);
+            padding: 3rem 2rem;
+            background: var(--bg-paper);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.05);
         }
         
         /* Header */
         header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
             border-bottom: 1px solid var(--border);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
-            position: relative;
+        }
+        
+        .lang-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            z-index: 100;
+        }
+        
+        .lang-btn {
+            background: var(--bg-paper);
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 0.3rem 0.8rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .lang-btn:hover, .lang-btn.active {
+            background: var(--text);
+            color: var(--bg-paper);
+            border-color: var(--text);
         }
         
         .profile-section {
             display: flex;
+            align-items: center;
+            justify-content: center;
             gap: 2rem;
-            align-items: flex-start;
+            margin-bottom: 1.5rem;
             flex-wrap: wrap;
         }
         
         .profile-photo {
-            width: 150px;
-            height: 220px;
-            border-radius: 8px;
-            border: 2px solid var(--border);
+            width: 120px;
+            height: 150px;
             object-fit: cover;
-            object-position: center top;
-            background: var(--bg-secondary);
-            display: block;
-        }
-        
-        .profile-info {
-            flex: 1;
-            min-width: 250px;
-        }
-        
-        .prompt {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            border: 1px solid var(--border);
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
         }
         
         h1 {
-            font-size: 2rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: var(--accent);
+            letter-spacing: -0.02em;
             margin-bottom: 0.3rem;
+            color: var(--text);
         }
         
         .name-cn {
+            font-size: 1.3rem;
             color: var(--text-muted);
-            font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
         
-        .subtitle {
-            color: var(--text-muted);
+        .affiliation {
+            font-family: 'Source Sans Pro', sans-serif;
             font-size: 1rem;
-        }
-        
-        .subtitle::before {
-            content: "// ";
-            color: var(--accent-green);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
         
         /* Navigation */
         nav {
             display: flex;
-            gap: 1rem;
-            margin: 1.5rem 0;
-            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
         
         nav a {
             color: var(--text-muted);
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 6px;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
             transition: all 0.2s;
-            font-size: 0.9rem;
         }
         
         nav a:hover {
-            color: var(--accent);
-            border-color: var(--accent);
+            color: var(--link);
+            border-bottom-color: var(--link);
         }
         
         /* Sections */
         section {
-            margin: 2rem 0;
+            margin: 2.5rem 0;
         }
         
         h2 {
-            color: var(--accent-purple);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        h2::before {
-            content: ">";
-            color: var(--accent-green);
-        }
-        
-        /* Code blocks */
-        .code-block {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin: 1rem 0;
-            overflow-x: auto;
-        }
-        
-        .code-header {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        
-        .dot-red { background: #ff5f56; }
-        .dot-yellow { background: #ffbd2e; }
-        .dot-green { background: #27c93f; }
-        
-        /* Content */
-        .field {
-            margin: 0.8rem 0;
-        }
-        
-        .field-name {
-            color: var(--accent);
-            font-weight: 600;
-        }
-        
-        .field-value {
-            color: var(--text);
-        }
-        
-        .comment {
-            color: var(--text-muted);
-            font-style: italic;
-        }
-        
-        .comment::before {
-            content: "# ";
-        }
-        
-        /* Publications */
-        .pub-item {
-            margin: 1rem 0;
-            padding: 1rem;
-            background: var(--bg-secondary);
-            border-left: 3px solid var(--accent);
-            border-radius: 0 6px 6px 0;
-        }
-        
-        .pub-title {
-            color: var(--text);
-            font-weight: 600;
-            margin-bottom: 0.3rem;
-        }
-        
-        .pub-meta {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        
-        .badge {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--text);
             display: inline-block;
-            padding: 0.2rem 0.5rem;
-            background: rgba(88, 166, 255, 0.1);
+        }
+        
+        h3 {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            margin: 1.5rem 0 0.5rem;
             color: var(--accent);
-            border-radius: 4px;
-            font-size: 0.75rem;
-            margin-left: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            text-indent: 2em;
+        }
+        
+        p:first-of-type {
+            text-indent: 0;
+        }
+        
+        /* Lists */
+        ul {
+            margin: 1rem 0 1rem 2rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
         }
         
         /* Links */
         a {
-            color: var(--accent);
+            color: var(--link);
             text-decoration: none;
         }
         
         a:hover {
+            color: var(--link-hover);
             text-decoration: underline;
+        }
+        
+        /* Publications */
+        .publication {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--border);
+            text-indent: 0;
+        }
+        
+        .publication-title {
+            font-weight: 700;
+            font-style: italic;
+        }
+        
+        .publication-meta {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 0.3rem;
+        }
+        
+        .badge {
+            display: inline-block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 1px 6px;
+            background: var(--accent);
+            color: white;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+        
+        /* CV Table Style */
+        .cv-item {
+            display: flex;
+            margin: 0.8rem 0;
+            text-indent: 0;
+        }
+        
+        .cv-year {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            min-width: 100px;
+            color: var(--text-muted);
+        }
+        
+        .cv-content {
+            flex: 1;
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 0.5rem 1rem;
+            margin: 1rem 0;
+            text-indent: 0;
+        }
+        
+        .contact-label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            color: var(--text-muted);
+        }
+        
+        /* Code for email obfuscation */
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9em;
         }
         
         /* Footer */
         footer {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
+            margin-top: 4rem;
+            padding-top: 2rem;
             border-top: 1px solid var(--border);
-            color: var(--text-muted);
+            text-align: center;
             font-size: 0.85rem;
+            color: var(--text-muted);
         }
         
-        .cursor {
-            display: inline-block;
-            width: 8px;
-            height: 1.2em;
-            background: var(--accent);
-            animation: blink 1s infinite;
-            vertical-align: text-bottom;
-            margin-left: 2px;
-        }
-        
-        @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
-        }
-        
-        /* Hide non-active language */
-        .lang-content {
-            display: none;
-        }
-        
-        .lang-content.active {
-            display: block;
+        /* Print styles */
+        @media print {
+            .lang-switch { display: none; }
+            .container { box-shadow: none; }
+            nav { display: none; }
         }
         
         /* Responsive */
         @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-            }
-            h1 {
-                font-size: 1.5rem;
-            }
-            .profile-photo {
-                width: 120px;
-                height: 150px;
-            }
-            .lang-switch {
-                position: static;
-                margin-bottom: 1rem;
-                justify-content: flex-end;
-            }
+            .container { padding: 2rem 1rem; }
+            h1 { font-size: 1.8rem; }
+            nav { gap: 1rem; font-size: 0.8rem; }
+            .cv-item { flex-direction: column; }
+            .cv-year { margin-bottom: 0.2rem; }
         }
+        
+        /* Hide/show language content */
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Language Switcher -->
-        <div class="lang-switch">
-            <button class="lang-btn active" onclick="switchLang('en')">EN</button>
-            <button class="lang-btn" onclick="switchLang('zh')">中文</button>
-        </div>
+    <div class="lang-switch">
+        <button class="lang-btn active" onclick="switchLang('en')">EN</button>
+        <button class="lang-btn" onclick="switchLang('zh')">中文</button>
+    </div>
 
-        <!-- English Version -->
+    <div class="container">
+        <!-- English Content -->
         <div id="content-en" class="lang-content active">
             <header>
                 <div class="profile-section">
-                    <img src="photo.png" alt="Yali Peng" class="profile-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22180%22><rect fill=%22%23161b22%22 width=%22150%22 height=%22180%22/><text fill=%22%238b949e%22 x=%2275%22 y=%2290%22 text-anchor=%22middle%22>Photo</text></svg>'">
-                    <div class="profile-info">
-                        <div class="prompt">~/profile ➜ cat about.txt</div>
+                    <img src="photo.png" alt="Yali Peng" class="profile-photo">
+                    <div>
                         <h1>Yali Peng</h1>
                         <div class="name-cn">彭雅丽</div>
-                        <div class="subtitle">Renmin University of China · School of Law</div>
-                        <nav>
-                            <a href="#about-en">about</a>
-                            <a href="#research-en">research</a>
-                            <a href="#publications-en">publications</a>
-                            <a href="#contact-en">contact</a>
-                            <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">moltbook ↗</a>
-                        </nav>
+                        <div class="affiliation">Associate Professor of Law<br>Renmin University of China</div>
                     </div>
                 </div>
+                
+                <nav>
+                    <a href="#about-en">About</a>
+                    <a href="#research-en">Research</a>
+                    <a href="#publications-en">Publications</a>
+                    <a href="#contact-en">Contact</a>
+                    <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">Blog ↗</a>
+                </nav>
             </header>
 
             <section id="about-en">
-                <h2>identity</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">profile.json</span>
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"name"</span>: <span class="field-value">"Yali Peng (彭雅丽)"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"title"</span>: <span class="field-value">"Associate Professor"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"institution"</span>: <span class="field-value">"Renmin University of China School of Law"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"education"</span>: {
-                    </div>
-                    <div style="margin-left: 2rem;">
-                        <div class="field">
-                            <span class="field-name">"doctoral"</span>: <span class="field-value">"University of Chicago (J.S.D.)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"master_law"</span>: <span class="field-value">"University of Chicago (LL.M.)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"master_criminology"</span>: <span class="field-value">"University of Oxford (MSc in Criminology and Criminal Justice)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"bachelor"</span>: <span class="field-value">"Tsinghua University (LL.B. + B.B.A.)"</span>
-                        </div>
-                    </div>
-                    <div>},</div>
-                    <div class="field">
-                        <span class="field-name">"bar"</span>: [<span class="field-value">"New York Bar"</span>, <span class="field-value">"China Bar"</span>],
-                    </div>
-                    <div class="comment">dual degree in law and business administration</div>
-                </div>
+                <h2>About</h2>
+                <p>I am an Associate Professor at the School of Law, Renmin University of China. My research focuses on criminal law, empirical legal studies, and judicial behavior. I employ quantitative methods to study sentencing decisions and the functioning of criminal justice systems.</p>
+                
+                <p>I hold a J.S.D. and LL.M. from the University of Chicago Law School, an MSc in Criminology and Criminal Justice from the University of Oxford, and dual bachelor's degrees (LL.B. and B.B.A.) from Tsinghua University. I am admitted to practice law in both New York State and China.</p>
             </section>
 
             <section id="research-en">
-                <h2>research_interests</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">research.py</span>
-                    </div>
-                    <div class="comment">Criminal law meets empirical methods</div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent-purple)">def</span> <span style="color: var(--accent-green)">research_areas</span>():<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-purple)">return</span> [<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"Criminal Law & Criminal Procedure"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"Empirical Legal Studies"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"Sentencing & Judicial Behavior"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"Comparative Criminal Justice"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"AI & Law (emerging)"</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;]
-                    </div>
-                </div>
+                <h2>Research Interests</h2>
+                
+                <h3>Primary Areas</h3>
+                <ul>
+                    <li>Criminal Law and Criminal Procedure</li>
+                    <li>Empirical Legal Studies</li>
+                    <li>Sentencing and Judicial Behavior</li>
+                    <li>Comparative Criminal Justice</li>
+                </ul>
+                
+                <h3>Methodology</h3>
+                <p>My work combines doctrinal analysis with empirical methods, including quantitative analysis of court decisions, statistical modeling of sentencing patterns, and comparative institutional analysis. I am particularly interested in how legal rules interact with institutional and social factors in practice.</p>
             </section>
 
             <section id="publications-en">
-                <h2>publications</h2>
+                <h2>Selected Publications</h2>
                 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Consent Myths and Norm Violation Responses
-                    </div>
-                    <div class="pub-meta">
-                        Behavioral Sciences & the Law (2025) 
-                        <span class="badge">SSCI Q1</span>
-                        <br>
-                        <span style="color: var(--text-muted)">with Xiaohong Yu</span>
+                <div class="publication">
+                    <div class="publication-title">Consent Myths and Norm Violation Responses: Reconceptualizing Rape Myth Theory in Sexual Assault Sentencing in China</div>
+                    <div class="publication-meta">
+                        <em>Behavioral Sciences & the Law</em> (2025)
+                        <span class="badge">SSCI Q1</span><br>
+                        with Xiaohong Yu
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Transparency, Punishment, and Judicial Behavior
-                    </div>
-                    <div class="pub-meta">
-                        Behavioral Sciences & the Law (2025)
+                <div class="publication">
+                    <div class="publication-title">Transparency, Punishment, and Judicial Behavior: Analyzing Criminal Sentencing Under China's Mass Publication Reform</div>
+                    <div class="publication-meta">
+                        <em>Behavioral Sciences & the Law</em> (2025)
                         <span class="badge">SSCI Q1</span>
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Drunk driving criminalization and frontline enforcement realities in China
-                    </div>
-                    <div class="pub-meta">
-                        Asia Pacific Law Review (2025)
-                        <span class="badge">SSCI Q1</span>
-                        <br>
-                        <span style="color: var(--text-muted)">with Jinting Deng</span>
+                <div class="publication">
+                    <div class="publication-title">Drunk driving criminalization and frontline enforcement realities in China</div>
+                    <div class="publication-meta">
+                        <em>Asia Pacific Law Review</em> (2025)
+                        <span class="badge">SSCI Q1</span><br>
+                        with Jinting Deng
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Bargaining in the Shadow of the Law: Victim Forgiveness and Criminal Sentencing
-                    </div>
-                    <div class="pub-meta">
-                        Victims & Offenders (2024)
+                <div class="publication">
+                    <div class="publication-title">Bargaining in the Shadow of the Law: Victim Forgiveness and Criminal Sentencing in China</div>
+                    <div class="publication-meta">
+                        <em>Victims & Offenders</em> (2024)
                         <span class="badge">SSCI Q2</span>
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Ethnic disparity in Chinese theft sentencing
-                    </div>
-                    <div class="pub-meta">
-                        China Review (2022)
-                        <span class="badge">SSCI Q2</span>
-                        <br>
-                        <span style="color: var(--text-muted)">with Jinhua Cheng</span>
+                <div class="publication">
+                    <div class="publication-title">Ethnic disparity in Chinese theft sentencing</div>
+                    <div class="publication-meta">
+                        <em>China Review</em> 22(3) (2022)
+                        <span class="badge">SSCI Q2</span><br>
+                        with Jinhua Cheng
                     </div>
                 </div>
+
+                <p style="margin-top: 2rem;"><a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank">→ View complete publication list on institutional page</a></p>
             </section>
 
             <section id="contact-en">
-                <h2>contact</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">contact.sh</span>
-                    </div>
-                    <div style="color: var(--accent-green)">➜</div>
-                    <div style="margin-top: 0.5rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"Email"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># <a href="mailto:yalip@ruc.edu.cn">yalip@ruc.edu.cn</a></span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"Moltbook"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">moltbook.com/u/LogosK-AI-2026</a></span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"Location"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># Beijing, China</span>
-                    </div>
+                <h2>Contact</h2>
+                
+                <div class="contact-grid">
+                    <span class="contact-label">Institution:</span>
+                    <span>School of Law, Renmin University of China<br>59 Zhongguancun Street, Haidian District<br>Beijing 100872, China</span>
+                    
+                    <span class="contact-label">Email:</span>
+                    <span class="mono">yalip [at] ruc.edu.cn</span>
+                    
+                    <span class="contact-label">Blog:</span>
+                    <span><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">Moltbook</a></span>
                 </div>
             </section>
 
             <footer>
-                <div class="prompt">
-                    ~/profile <span style="color: var(--accent-green)">➜</span> <span class="cursor"></span>
-                </div>
-                <p style="margin-top: 1rem;">
-                    <span style="color: var(--text-muted)">© 2025 Yali Peng</span> | 
-                    <span style="color: var(--text-muted)">Built with</span> 
-                    <span style="color: var(--accent)">&lt;/&gt;</span>
-                </p>
+                <p>© 2025 Yali Peng · <a href="https://aryella-byte.github.io/pengyali.github.io/">https://aryella-byte.github.io/pengyali.github.io/</a></p>
             </footer>
         </div>
 
-        <!-- Chinese Version -->
+        <!-- Chinese Content -->
         <div id="content-zh" class="lang-content">
             <header>
                 <div class="profile-section">
-                    <img src="photo.png" alt="彭雅丽" class="profile-photo" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22150%22 height=%22180%22><rect fill=%22%23161b22%22 width=%22150%22 height=%22180%22/><text fill=%22%238b949e%22 x=%2275%22 y=%2290%22 text-anchor=%22middle%22>照片</text></svg>'">
-                    <div class="profile-info">
-                        <div class="prompt">~/个人资料 ➜ cat 简介.txt</div>
+                    <img src="photo.png" alt="彭雅丽" class="profile-photo">
+                    <div>
                         <h1>彭雅丽</h1>
-                        <div class="name-cn" style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 0.5rem;">Yali Peng</div>
-                        <div class="subtitle">中国人民大学 · 法学院 · 副教授</div>
-                        <nav>
-                            <a href="#about-zh">关于</a>
-                            <a href="#research-zh">研究</a>
-                            <a href="#publications-zh">论文</a>
-                            <a href="#contact-zh">联系</a>
-                            <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">moltbook ↗</a>
-                        </nav>
+                        <div class="name-cn" style="font-size: 1.3rem; color: var(--text-muted); margin-bottom: 0.5rem;">Yali Peng</div>
+                        <div class="affiliation">副教授<br>中国人民大学法学院</div>
                     </div>
                 </div>
+                
+                <nav>
+                    <a href="#about-zh">简介</a>
+                    <a href="#research-zh">研究</a>
+                    <a href="#publications-zh">论文</a>
+                    <a href="#contact-zh">联系</a>
+                    <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">博客 ↗</a>
+                </nav>
             </header>
 
             <section id="about-zh">
-                <h2>身份信息</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">个人资料.json</span>
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"姓名"</span>: <span class="field-value">"彭雅丽 (Yali Peng)"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"职称"</span>: <span class="field-value">"副教授"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"机构"</span>: <span class="field-value">"中国人民大学法学院"</span>,
-                    </div>
-                    <div class="field">
-                        <span class="field-name">"教育背景"</span>: {
-                    </div>
-                    <div style="margin-left: 2rem;">
-                        <div class="field">
-                            <span class="field-name">"博士"</span>: <span class="field-value">"芝加哥大学 (J.S.D.)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"法学硕士"</span>: <span class="field-value">"芝加哥大学 (LL.M.)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"犯罪学硕士"</span>: <span class="field-value">"牛津大学 (MSc in Criminology and Criminal Justice)"</span>,
-                        </div>
-                        <div class="field">
-                            <span class="field-name">"本科"</span>: <span class="field-value">"清华大学 (法学学士 + 工商管理学士)"</span>
-                        </div>
-                    </div>
-                    <div>},</div>
-                    <div class="field">
-                        <span class="field-name">"执业资格"</span>: [<span class="field-value">"纽约州律师资格"</span>, <span class="field-value">"中国法律职业资格"</span>],
-                    </div>
-                    <div class="comment">法学与工商管理双学位背景</div>
-                </div>
+                <h2>简介</h2>
+                <p>中国人民大学法学院副教授，研究领域为刑法学、实证法学、司法行为。采用定量方法研究量刑决策和刑事司法系统运作。</p>
+                
+                <p>拥有芝加哥大学法学博士（J.S.D.）和法学硕士（LL.M.），牛津大学犯罪学与刑事司法硕士（MSc），清华大学法学学士和工商管理学士双学位。拥有纽约州和中国律师执业资格。</p>
             </section>
 
             <section id="research-zh">
                 <h2>研究领域</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">研究领域.py</span>
-                    </div>
-                    <div class="comment">刑事法学与实证研究方法相结合</div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent-purple)">def</span> <span style="color: var(--accent-green)">研究领域</span>():<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<span style="color: var(--accent-purple)">return</span> [<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"刑法学与刑事诉讼法学"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"实证法学研究"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"量刑与司法行为"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"比较刑事司法"</span>,<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="field-value">"人工智能与法律（新兴领域）"</span><br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;]
-                    </div>
-                </div>
+                
+                <h3>主要方向</h3>
+                <ul>
+                    <li>刑法学与刑事诉讼法学</li>
+                    <li>实证法学研究</li>
+                    <li>量刑与司法行为</li>
+                    <li>比较刑事司法</li>
+                </ul>
+                
+                <h3>研究方法</h3>
+                <p>研究结合教义分析与实证方法，包括法院判决的定量分析、量刑模式的统计建模和比较制度分析。特别关注法律规则在实践中如何与制度和社会因素互动。</p>
             </section>
 
             <section id="publications-zh">
                 <h2>代表论文</h2>
                 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Consent Myths and Norm Violation Responses: Reconceptualizing Rape Myth Theory in Sexual Assault Sentencing in China
-                    </div>
-                    <div class="pub-meta">
-                        Behavioral Sciences & the Law (2025) 
-                        <span class="badge">SSCI Q1</span>
-                        <br>
-                        <span style="color: var(--text-muted)">合作者：于晓虹</span>
+                <div class="publication">
+                    <div class="publication-title">Consent Myths and Norm Violation Responses: Reconceptualizing Rape Myth Theory in Sexual Assault Sentencing in China</div>
+                    <div class="publication-meta">
+                        <em>Behavioral Sciences & the Law</em> (2025)
+                        <span class="badge">SSCI Q1</span><br>
+                        合作者：于晓虹
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Transparency, Punishment, and Judicial Behavior: Analyzing Criminal Sentencing Under China's Mass Publication Reform
-                    </div>
-                    <div class="pub-meta">
-                        Behavioral Sciences & the Law (2025)
+                <div class="publication">
+                    <div class="publication-title">Transparency, Punishment, and Judicial Behavior: Analyzing Criminal Sentencing Under China's Mass Publication Reform</div>
+                    <div class="publication-meta">
+                        <em>Behavioral Sciences & the Law</em> (2025)
                         <span class="badge">SSCI Q1</span>
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Drunk driving criminalization and frontline enforcement realities in China
-                    </div>
-                    <div class="pub-meta">
-                        Asia Pacific Law Review (2025)
-                        <span class="badge">SSCI Q1</span>
-                        <br>
-                        <span style="color: var(--text-muted)">合作者：邓矜婷</span>
+                <div class="publication">
+                    <div class="publication-title">Drunk driving criminalization and frontline enforcement realities in China</div>
+                    <div class="publication-meta">
+                        <em>Asia Pacific Law Review</em> (2025)
+                        <span class="badge">SSCI Q1</span><br>
+                        合作者：邓矜婷
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Bargaining in the Shadow of the Law: Victim Forgiveness and Criminal Sentencing in China
-                    </div>
-                    <div class="pub-meta">
-                        Victims & Offenders (2024)
+                <div class="publication">
+                    <div class="publication-title">Bargaining in the Shadow of the Law: Victim Forgiveness and Criminal Sentencing in China</div>
+                    <div class="publication-meta">
+                        <em>Victims & Offenders</em> (2024)
                         <span class="badge">SSCI Q2</span>
                     </div>
                 </div>
 
-                <div class="pub-item">
-                    <div class="pub-title">
-                        Ethnic disparity in Chinese theft sentencing
-                    </div>
-                    <div class="pub-meta">
-                        China Review (2022)
-                        <span class="badge">SSCI Q2</span>
-                        <br>
-                        <span style="color: var(--text-muted)">合作者：程金华</span>
+                <div class="publication">
+                    <div class="publication-title">Ethnic disparity in Chinese theft sentencing</div>
+                    <div class="publication-meta">
+                        <em>China Review</em> 22(3) (2022)
+                        <span class="badge">SSCI Q2</span><br>
+                        合作者：程金华
                     </div>
                 </div>
 
-                <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-secondary); border-radius: 6px;">
-                    <div class="comment">查看更多论文请访问人大法学院官网</div>
-                    <a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank" style="font-size: 0.9rem;">→ 官网个人主页</a>
-                </div>
+                <p style="margin-top: 2rem;"><a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank">→ 查看完整论文列表（人大法学院官网）</a></p>
             </section>
 
             <section id="contact-zh">
                 <h2>联系方式</h2>
-                <div class="code-block">
-                    <div class="code-header">
-                        <span class="dot dot-red"></span>
-                        <span class="dot dot-yellow"></span>
-                        <span class="dot dot-green"></span>
-                        <span style="color: var(--text-muted); margin-left: 0.5rem;">联系方式.sh</span>
-                    </div>
-                    <div style="color: var(--accent-green)">➜</div>
-                    <div style="margin-top: 0.5rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"邮箱"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># <a href="mailto:yalip@ruc.edu.cn">yalip@ruc.edu.cn</a></span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"Moltbook"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">moltbook.com/u/LogosK-AI-2026</a></span>
-                    </div>
-                    <div style="margin-top: 1rem;">
-                        <span style="color: var(--accent)">echo</span> <span class="field-value">"地址"</span> <span style="color: var(--text-muted)">&& \</span><br>
-                        &nbsp;&nbsp;<span style="color: var(--text)"># 北京市海淀区中关村大街59号中国人民大学法学院</span>
-                    </div>
+                
+                <div class="contact-grid">
+                    <span class="contact-label">单位：</span>
+                    <span>中国人民大学法学院<br>北京市海淀区中关村大街59号<br>邮编：100872</span>
+                    
+                    <span class="contact-label">邮箱：</span>
+                    <span class="mono">yalip [at] ruc.edu.cn</span>
+                    
+                    <span class="contact-label">博客：</span>
+                    <span><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">Moltbook</a></span>
                 </div>
             </section>
 
             <footer>
-                <div class="prompt">
-                    ~/个人资料 <span style="color: var(--accent-green)">➜</span> <span class="cursor"></span>
-                </div>
-                <p style="margin-top: 1rem;">
-                    <span style="color: var(--text-muted)">© 2025 彭雅丽</span> | 
-                    <span style="color: var(--text-muted)">Built with</span> 
-                    <span style="color: var(--accent)">&lt;/&gt;</span>
-                </p>
+                <p>© 2025 彭雅丽 · <a href="https://aryella-byte.github.io/pengyali.github.io/">https://aryella-byte.github.io/pengyali.github.io/</a></p>
             </footer>
         </div>
     </div>
+
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.getElementById('content-' + lang).classList.add('active');
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
 
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -749,44 +582,12 @@
             "http://www.law.ruc.edu.cn/home/sz/s/?id=379"
         ],
         "alumniOf": [
-            {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Chicago Law School"
-            },
-            {
-                "@type": "CollegeOrUniversity",
-                "name": "University of Oxford"
-            },
-            {
-                "@type": "CollegeOrUniversity",
-                "name": "Tsinghua University"
-            }
+            {"@type": "CollegeOrUniversity", "name": "University of Chicago Law School"},
+            {"@type": "CollegeOrUniversity", "name": "University of Oxford"},
+            {"@type": "CollegeOrUniversity", "name": "Tsinghua University"}
         ],
-        "knowsAbout": [
-            "Criminal Law",
-            "Empirical Legal Studies",
-            "Sentencing and Judicial Behavior",
-            "Comparative Criminal Justice"
-        ]
+        "knowsAbout": ["Criminal Law", "Empirical Legal Studies", "Sentencing", "Judicial Behavior"]
     }
-    </script>
-
-    <script>
-        function switchLang(lang) {
-            // Hide all content
-            document.querySelectorAll('.lang-content').forEach(el => {
-                el.classList.remove('active');
-            });
-            
-            // Show selected content
-            document.getElementById('content-' + lang).classList.add('active');
-            
-            // Update buttons
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-        }
     </script>
 </body>
 </html>
