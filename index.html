@@ -536,6 +536,245 @@
                 <p style="margin-top: 2rem;"><a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank">→ 查看完整论文列表（人大法学院官网）</a></p>
             </section>
 
+<!-- Lab/Fun Section - Add before contact section -->
+<section id="lab">
+    <h2><span class="chinese">实验室</span> Lab</h2>
+    
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="btn btn-red"></span>
+                <span class="btn btn-yellow"></span>
+                <span class="btn btn-green"></span>
+            </div>
+            <div class="terminal-title">pengyali@ruc: ~/lab</div>
+        </div>
+        
+        <div class="terminal-body">
+            <div class="line">
+                <span class="prompt">pengyali@ruc:</span>
+                <span class="path">~/lab</span>
+                <span class="dollar">$</span>
+                <span class="command"> ls -la</span>
+            </div>
+            
+            <div class="output">
+                <div class="dir-item">
+                    <span class="icon">📊</span>
+                    <span class="name"><a href="./seeing-theory/" target="_blank">seeing-theory/</a></span>
+                    <span class="desc">- 交互式概率统计学习平台</span>
+                </div>
+                <div class="dir-item">
+                    <span class="icon">📚</span>
+                    <span class="name">research/</span>
+                    <span class="desc">- 实证法学研究工具</span>
+                </div>
+                <div class="dir-item">
+                    <span class="icon">🤖</span>
+                    <span class="name"><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">ai-assistant/</a></span>
+                    <span class="desc">- AI 驱动的学术助手</span>
+                </div>
+            </div>
+            
+            <div class="line" style="margin-top: 1rem;">
+                <span class="prompt">pengyali@ruc:</span>
+                <span class="path">~/lab</span>
+                <span class="dollar">$</span>
+                <span class="cursor blink">_</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="quick-actions">
+        <h4>常用命令</h4>
+        <div class="action-grid">
+            <a href="./seeing-theory/" class="action-btn" target="_blank">
+                <code>open seeing-theory</code>
+                <span>启动概率统计学习平台</span>
+            </a>
+            <a href="https://moltbook.com/u/LogosK-AI-2026" class="action-btn" target="_blank">
+                <code>chat with AI</code>
+                <span>与AI研究助手对话</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Terminal Styles */
+.terminal-container {
+    background: #0d1117;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    margin: 1.5rem 0;
+    border: 1px solid #30363d;
+    font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+}
+
+.terminal-header {
+    background: #161b22;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 1px solid #30363d;
+}
+
+.terminal-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.btn-red { background: #ff5f56; }
+.btn-yellow { background: #ffbd2e; }
+.btn-green { background: #27ca40; }
+
+.terminal-title {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.line {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.prompt {
+    color: #7ee787;
+    font-weight: bold;
+}
+
+.path {
+    color: #79c0ff;
+}
+
+.dollar {
+    color: #ff7b72;
+}
+
+.command {
+    color: #e6edf3;
+}
+
+.cursor {
+    color: #7ee787;
+    font-weight: bold;
+}
+
+.blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.output {
+    margin: 1rem 0 1rem 1.5rem;
+}
+
+.dir-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.3rem 0;
+}
+
+.dir-item .icon {
+    font-size: 1.1rem;
+}
+
+.dir-item .name {
+    color: #58a6ff;
+    min-width: 160px;
+}
+
+.dir-item .name a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.dir-item .name a:hover {
+    text-decoration: underline;
+}
+
+.dir-item .desc {
+    color: #8b949e;
+    font-size: 0.85rem;
+}
+
+/* Quick Actions */
+.quick-actions {
+    margin-top: 1.5rem;
+}
+
+.quick-actions h4 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.action-btn {
+    background: #f5f5f5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    border-color: var(--link);
+    background: #fafafa;
+}
+
+.action-btn code {
+    color: #22863a;
+    font-family: 'JetBrains Mono', Monaco, monospace;
+    font-size: 0.85rem;
+}
+
+.action-btn span {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .terminal-body {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .dir-item .name {
+        min-width: auto;
+    }
+}
+</style>
             <section id="contact-zh">
                 <h2>联系方式</h2>
                 
