@@ -234,13 +234,15 @@
     <!-- Theme initialization script (prevent flash) -->
     <script>
       (function() {
-        const theme = localStorage.getItem('seeing-theory-theme') || 'system'
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        // Check localStorage first
+        const savedTheme = localStorage.getItem('seeing-theory-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        if (theme === 'dark' || (theme === 'system' && prefersDark)) {
-          document.documentElement.classList.add('dark')
-        } else {
-          document.documentElement.classList.remove('dark')
+        // Apply theme immediately before page renders
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        } else if (savedTheme === 'light') {
+          document.documentElement.classList.remove('dark');
         }
       })()
     </script>
