@@ -326,6 +326,51 @@
         /* Hide/show language content */
         .lang-content { display: none; }
         .lang-content.active { display: block; }
+        
+        /* Terminal Lab Styles */
+        .terminal-container {
+            background: #0d1117;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            margin: 1.5rem 0;
+            border: 1px solid #30363d;
+            font-family: 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+        }
+        .terminal-header {
+            background: #161b22;
+            padding: 0.75rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            border-bottom: 1px solid #30363d;
+        }
+        .terminal-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .btn-red { width: 12px; height: 12px; border-radius: 50%; background: #ff5f56; display: inline-block; }
+        .btn-yellow { width: 12px; height: 12px; border-radius: 50%; background: #ffbd2e; display: inline-block; }
+        .btn-green { width: 12px; height: 12px; border-radius: 50%; background: #27ca40; display: inline-block; }
+        .terminal-title { color: #8b949e; font-size: 0.85rem; }
+        .terminal-body {
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #c9d1d9;
+        }
+        .line { margin-bottom: 0.5rem; }
+        .prompt { color: #7ee787; }
+        .path { color: #79c0ff; }
+        .dollar { color: #fff; margin: 0 0.25rem; }
+        .command { color: #fff; }
+        .output { margin: 0.5rem 0; }
+        .dir-item { padding: 0.25rem 0; }
+        .dir-item .icon { margin-right: 0.5rem; }
+        .dir-item .name { color: #58a6ff; }
+        .dir-item .name a { color: #58a6ff; text-decoration: none; }
+        .dir-item .name a:hover { text-decoration: underline; }
+        .dir-item .desc { color: #8b949e; font-size: 0.85rem; margin-left: 0.5rem; }
     </style>
 </head>
 <body>
@@ -351,8 +396,8 @@
                     <a href="#about-en">About</a>
                     <a href="#research-en">Research</a>
                     <a href="#publications-en">Publications</a>
+                    <a href="#lab-en">Lab</a>
                     <a href="#contact-en">Contact</a>
-                    <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">AI Assistant ↗</a>
                 </nav>
             </header>
 
@@ -427,6 +472,40 @@
                 <p style="margin-top: 2rem;"><a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank">→ View complete publication list on institutional page</a></p>
             </section>
 
+            <section id="lab-en">
+                <h2>Lab</h2>
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn btn-red"></span>
+                            <span class="btn btn-yellow"></span>
+                            <span class="btn btn-green"></span>
+                        </div>
+                        <div class="terminal-title">pengyali@ruc: ~/lab</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="line">
+                            <span class="prompt">pengyali@ruc:</span>
+                            <span class="path">~/lab</span>
+                            <span class="dollar">$</span>
+                            <span class="command"> ls -la</span>
+                        </div>
+                        <div class="output">
+                            <div class="dir-item">
+                                <span class="icon">📊</span>
+                                <span class="name"><a href="./seeing-theory/" target="_blank">seeing-theory/</a></span>
+                                <span class="desc">- Interactive Probability & Statistics Learning Platform</span>
+                            </div>
+                            <div class="dir-item">
+                                <span class="icon">🤖</span>
+                                <span class="name"><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">ai-assistant/</a></span>
+                                <span class="desc">- AI Assistant (Moltbook)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contact-en">
                 <h2>Contact</h2>
                 
@@ -437,8 +516,6 @@
                     <span class="contact-label">Email:</span>
                     <span class="mono">yalip [at] ruc.edu.cn</span>
                     
-                    <span class="contact-label">AI Assistant:</span>
-                    <span><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">Moltbook (powered by AI)</a></span>
                 </div>
             </section>
 
@@ -463,8 +540,8 @@
                     <a href="#about-zh">简介</a>
                     <a href="#research-zh">研究</a>
                     <a href="#publications-zh">论文</a>
+                    <a href="#lab-zh">实验室</a>
                     <a href="#contact-zh">联系</a>
-                    <a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">AI助手 ↗</a>
                 </nav>
             </header>
 
@@ -537,6 +614,43 @@
                 <p style="margin-top: 2rem;"><a href="http://www.law.ruc.edu.cn/home/sz/s/?id=379" target="_blank">→ 查看完整论文列表（人大法学院官网）</a></p>
             </section>
 
+<!-- Lab Section - Bilingual -->
+
+<!-- Chinese Version -->
+            <section id="lab-zh">
+                <h2><span class="chinese">实验室</span> Lab</h2>
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="btn btn-red"></span>
+                            <span class="btn btn-yellow"></span>
+                            <span class="btn btn-green"></span>
+                        </div>
+                        <div class="terminal-title">pengyali@ruc: ~/lab</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="line">
+                            <span class="prompt">pengyali@ruc:</span>
+                            <span class="path">~/lab</span>
+                            <span class="dollar">$</span>
+                            <span class="command"> ls -la</span>
+                        </div>
+                        <div class="output">
+                            <div class="dir-item">
+                                <span class="icon">📊</span>
+                                <span class="name"><a href="./seeing-theory/" target="_blank">seeing-theory/</a></span>
+                                <span class="desc">- 交互式概率统计学习平台</span>
+                            </div>
+                            <div class="dir-item">
+                                <span class="icon">🤖</span>
+                                <span class="name"><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">ai-assistant/</a></span>
+                                <span class="desc">- AI 助手 (Moltbook)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="contact-zh">
                 <h2>联系方式</h2>
                 
@@ -547,8 +661,6 @@
                     <span class="contact-label">邮箱：</span>
                     <span class="mono">yalip [at] ruc.edu.cn</span>
                     
-                    <span class="contact-label">AI助手：</span>
-                    <span><a href="https://moltbook.com/u/LogosK-AI-2026" target="_blank">Moltbook (AI驱动)</a></span>
                 </div>
             </section>
 
@@ -588,7 +700,6 @@
         "url": "https://aryella-byte.github.io/pengyali.github.io/",
         "image": "https://aryella-byte.github.io/pengyali.github.io/photo.png",
         "sameAs": [
-            "https://moltbook.com/u/LogosK-AI-2026",
             "http://www.law.ruc.edu.cn/home/sz/s/?id=379"
         ],
         "alumniOf": [
