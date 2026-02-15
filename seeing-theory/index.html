@@ -234,14 +234,12 @@
     <!-- Theme initialization script (prevent flash) -->
     <script>
       (function() {
-        // Check localStorage first
-        const savedTheme = localStorage.getItem('seeing-theory-theme');
+        const saved = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
         
-        // Apply theme immediately before page renders
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+        if (saved === 'dark' || (!saved && prefersDark)) {
           document.documentElement.classList.add('dark');
-        } else if (savedTheme === 'light') {
+        } else {
           document.documentElement.classList.remove('dark');
         }
       })()
@@ -263,10 +261,10 @@
         }
       }(window.location))
     </script>
-    <script type="module" crossorigin src="/pengyali.github.io/seeing-theory/assets/index-B7vGWNDh.js"></script>
+    <script type="module" crossorigin src="/pengyali.github.io/seeing-theory/assets/index-CRo1uTNo.js"></script>
     <link rel="modulepreload" crossorigin href="/pengyali.github.io/seeing-theory/assets/vendor-react-DQscjJnN.js">
     <link rel="modulepreload" crossorigin href="/pengyali.github.io/seeing-theory/assets/vendor-icons-CdKsZ0ym.js">
-    <link rel="stylesheet" crossorigin href="/pengyali.github.io/seeing-theory/assets/css/index-BXTfe1mf.css">
+    <link rel="stylesheet" crossorigin href="/pengyali.github.io/seeing-theory/assets/css/index-CqvghxxH.css">
   </head>
   <body>
     <!-- Skip to main content link for keyboard users -->
