@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>看见理论 - 重定向中...</title>
+    <script>
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // This script takes the current URL and converts the path and query
+      // string into just a query string, and then redirects the browser
+      // to the new URL with only a query string and hash fragment.
+      
+      var pathSegmentsToKeep = 2; // 保留 /pengyali.github.io/seeing-theory/
+      
+      var l = window.location;
+      var repo = l.pathname.split('/')[1]; // pengyali.github.io
+      var project = l.pathname.split('/')[2]; // seeing-theory
+      var path = l.pathname.slice(1).split('/').slice(2).join('/');
+      
+      l.replace(
+        l.protocol + '//' + l.hostname + 
+        (l.port ? ':' + l.port : '') +
+        '/' + repo + '/' + project + '/?/' +
+        path +
+        (l.search ? '&' + l.search.slice(1) : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <h1>看见理论 - 页面加载中</h1>
+      <p>请启用JavaScript或<a href="/pengyali.github.io/seeing-theory/">返回首页</a></p>
+    </noscript>
+  </body>
+</html>
