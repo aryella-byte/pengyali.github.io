@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     
-    <!-- Preconnect to external domains -->
+    <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://www.moltbook.com" crossorigin />
     
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/pengyali.github.io/seeing-theory/vite.svg" />
+    <link rel="apple-touch-icon" href="/pengyali.github.io/seeing-theory/vite.svg" />
     
     <!-- Viewport meta for responsive design -->
     <meta 
@@ -24,28 +26,174 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="看见理论" />
+    <meta name="application-name" content="看见理论" />
+    <meta name="msapplication-TileColor" content="#0f172a" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
     
-    <!-- SEO and accessibility -->
-    <meta name="description" content="看见理论 Seeing Theory - 专为法律实证研究设计的统计学可视化教学平台" />
-    <meta name="keywords" content="统计学,概率论,法律实证,教学,D3可视化,贝叶斯,回归分析" />
+    <!-- Primary SEO Meta Tags -->
+    <title>看见理论 | Seeing Theory - 法律实证统计学可视化教学平台</title>
+    <meta name="description" content="看见理论(Seeing Theory)是专为法律实证研究设计的统计学可视化教学平台，涵盖概率论、贝叶斯推断、回归分析等内容，通过交互式图表帮助理解统计学概念。" />
+    <meta name="keywords" content="统计学,概率论,法律实证,教学,D3可视化,贝叶斯,回归分析,数据科学,法学研究,计量法学,Seeing Theory" />
     <meta name="author" content="中国人民大学彭雅丽课题组" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="bingbot" content="index, follow" />
     
-    <!-- Open Graph / Social media -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aryella-byte.github.io/pengyali.github.io/seeing-theory/" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="看见理论 Seeing Theory" />
-    <meta property="og:description" content="专为法律实证研究设计的统计学可视化教学平台" />
+    <meta property="og:url" content="https://aryella-byte.github.io/pengyali.github.io/seeing-theory/" />
+    <meta property="og:site_name" content="看见理论 Seeing Theory" />
+    <meta property="og:title" content="看见理论 | Seeing Theory - 法律实证统计学可视化教学平台" />
+    <meta property="og:description" content="专为法律实证研究设计的统计学可视化教学平台，通过交互式图表帮助理解概率论、贝叶斯推断、回归分析等统计学概念。" />
+    <meta property="og:image" content="https://aryella-byte.github.io/pengyali.github.io/seeing-theory/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="看见理论 - 法律实证统计学教学平台" />
     <meta property="og:locale" content="zh_CN" />
+    <meta property="og:locale:alternate" content="en_US" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://aryella-byte.github.io/pengyali.github.io/seeing-theory/" />
+    <meta name="twitter:title" content="看见理论 | Seeing Theory - 法律实证统计学可视化教学平台" />
+    <meta name="twitter:description" content="专为法律实证研究设计的统计学可视化教学平台，通过交互式图表帮助理解概率论、贝叶斯推断等统计学概念。" />
+    <meta name="twitter:image" content="https://aryella-byte.github.io/pengyali.github.io/seeing-theory/og-image.png" />
+    <meta name="twitter:image:alt" content="看见理论 - 法律实证统计学教学平台" />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "看见理论 Seeing Theory",
+      "alternateName": ["Seeing Theory CN", "统计学可视化教学平台"],
+      "url": "https://aryella-byte.github.io/pengyali.github.io/seeing-theory/",
+      "description": "专为法律实证研究设计的统计学可视化教学平台，涵盖概率论、贝叶斯推断、回归分析等内容。",
+      "inLanguage": ["zh-CN", "en"],
+      "author": {
+        "@type": "Organization",
+        "name": "中国人民大学彭雅丽课题组",
+        "url": "https://aryella-byte.github.io/pengyali.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "中国人民大学",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://aryella-byte.github.io/pengyali.github.io/seeing-theory/vite.svg"
+        }
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "统计学与法律实证研究",
+        "description": "通过交互式可视化教学统计学概念"
+      },
+      "educationalUse": "教学与学习",
+      "audience": {
+        "@type": "EducationalAudience",
+        "educationalRole": "学生"
+      },
+      "isBasedOn": {
+        "@type": "WebSite",
+        "name": "Seeing Theory",
+        "url": "https://seeing-theory.brown.edu/",
+        "author": {
+          "@type": "Organization",
+          "name": "Brown University"
+        }
+      },
+      "datePublished": "2025-01-01",
+      "dateModified": "2025-02-15"
+    }
+    </script>
+    
+    <!-- Additional Structured Data for Educational Application -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "法律实证统计学",
+      "description": "专为法律实证研究设计的统计学课程，包含概率论、统计推断、回归分析等核心内容。",
+      "provider": {
+        "@type": "Organization",
+        "name": "中国人民大学彭雅丽课题组",
+        "sameAs": "https://aryella-byte.github.io/pengyali.github.io/"
+      },
+      "hasCourseInstance": [
+        {
+          "@type": "CourseInstance",
+          "courseMode": "online",
+          "instructor": {
+            "@type": "Person",
+            "name": "彭雅丽"
+          }
+        }
+      ],
+      "teaches": [
+        "概率论基础",
+        "复合概率",
+        "概率分布",
+        "频率派推断",
+        "贝叶斯推断",
+        "回归分析"
+      ],
+      "educationalLevel": "高等教育",
+      "subjectOf": {
+        "@type": "DefinedTerm",
+        "name": "统计学",
+        "inDefinedTermSet": {
+          "@type": "DefinedTermSet",
+          "name": "数学学科"
+        }
+      }
+    }
+    </script>
+    
+    <!-- BreadcrumbList Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首页",
+          "item": "https://aryella-byte.github.io/pengyali.github.io/seeing-theory/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "章节",
+          "item": "https://aryella-byte.github.io/pengyali.github.io/seeing-theory/#chapters"
+        }
+      ]
+    }
+    </script>
     
     <!-- Performance: Preload critical resources -->
     <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gJ3JlYWN0JwppbXBvcnQgeyBjcmVhdGVSb290IH0gZnJvbSAncmVhY3QtZG9tL2NsaWVudCcKaW1wb3J0ICcuL2luZGV4LmNzcycKaW1wb3J0IEFwcCBmcm9tICcuL0FwcC50c3gnCgpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykhKS5yZW5kZXIoCiAgPFN0cmljdE1vZGU+CiAgICA8QXBwIC8+CiAgPC9TdHJpY3RNb2RlPiwKKQo=" as="script" crossorigin />
+    <link rel="preload" href="/assets/index.css" as="style" />
     
-    <!-- Prevent FOUC -->
+    <!-- Preload fonts if using custom fonts -->
+    <!-- <link rel="preload" href="/fonts/main-font.woff2" as="font" type="font/woff2" crossorigin /> -->
+    
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
     <style>
       /* Critical CSS for preventing flash of unstyled content */
       html {
         background: linear-gradient(to bottom right, #0f172a, #1e293b);
         min-height: 100vh;
+      }
+      
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: linear-gradient(to bottom right, #0a0a0a, #1a1a2e);
+        }
       }
       
       /* Skip link styles */
@@ -60,7 +208,7 @@
         text-decoration: none;
         font-weight: 500;
         border-radius: 0 0 8px 0;
-        transition: top 0.3s;
+        transition: top 0.3s ease;
       }
       
       .skip-link:focus {
@@ -75,13 +223,31 @@
           transition-duration: 0.01ms !important;
         }
       }
+      
+      /* Dark mode class support */
+      html.dark {
+        background: linear-gradient(to bottom right, #0a0a0a, #1a1a2e);
+        color-scheme: dark;
+      }
     </style>
     
-    <title>看见理论 | Seeing Theory - 法律实证统计学教学平台</title>
-    <script type="module" crossorigin src="/pengyali.github.io/seeing-theory/assets/index-BCFm-gT8.js"></script>
+    <!-- Theme initialization script (prevent flash) -->
+    <script>
+      (function() {
+        const theme = localStorage.getItem('seeing-theory-theme') || 'system'
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        
+        if (theme === 'dark' || (theme === 'system' && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      })()
+    </script>
+    <script type="module" crossorigin src="/pengyali.github.io/seeing-theory/assets/index-DpD7CDFX.js"></script>
     <link rel="modulepreload" crossorigin href="/pengyali.github.io/seeing-theory/assets/vendor-react-DQscjJnN.js">
-    <link rel="modulepreload" crossorigin href="/pengyali.github.io/seeing-theory/assets/vendor-icons-C1N6S8Qy.js">
-    <link rel="stylesheet" crossorigin href="/pengyali.github.io/seeing-theory/assets/css/index-BUUy79ER.css">
+    <link rel="modulepreload" crossorigin href="/pengyali.github.io/seeing-theory/assets/vendor-icons-Bx81njYR.js">
+    <link rel="stylesheet" crossorigin href="/pengyali.github.io/seeing-theory/assets/css/index-DRUetmmC.css">
   </head>
   <body>
     <!-- Skip to main content link for keyboard users -->
