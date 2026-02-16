@@ -4,24 +4,24 @@
     <meta charset="utf-8">
     <title>看见理论 - 重定向中...</title>
     <script>
-      // Single Page Apps for GitHub Pages - Subdirectory version
-      // For /pengyali.github.io/seeing-theory/chapter/1 paths
-      
+      // Single Page Apps for GitHub Pages
+      // Redirect to /pengyali.github.io/seeing-theory/ with path as query
       var l = window.location;
-      // Extract the path after /seeing-theory/
       var fullPath = l.pathname;
-      var projectPath = '/seeing-theory/';
+      var projectPath = '/pengyali.github.io/seeing-theory/';
       var index = fullPath.indexOf(projectPath);
-      
+
       if (index !== -1) {
         var route = fullPath.substring(index + projectPath.length);
-        l.replace(
-          l.protocol + '//' + l.hostname + 
-          (l.port ? ':' + l.port : '') +
-          projectPath + '?/' + route +
-          (l.search ? '&' + l.search.slice(1) : '') +
-          l.hash
-        );
+        if (route) {
+          l.replace(
+            l.protocol + '//' + l.hostname +
+            (l.port ? ':' + l.port : '') +
+            projectPath + '?/' + route +
+            (l.search ? '&' + l.search.slice(1) : '') +
+            l.hash
+          );
+        }
       }
     </script>
   </head>
